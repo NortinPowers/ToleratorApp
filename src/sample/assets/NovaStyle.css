@@ -1,0 +1,48 @@
+
+/*
+ * Push Button в стиле
+ */
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: #f5b598;
+    -fx-font-family: "Berlin Sans FB", Helvetica, Arial, sans-serif;
+    -fx-font-size: 34pt;
+    -fx-text-fill: #3F3A3A;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #F39063;
+}
+
+.button:focused {
+    -fx-border-color:  #2E3348,  #2E3348;
+    -fx-border-width: 2, 2;
+    -fx-border-radius: 10, 10;
+    -fx-background-color: #F39063;
+}
+
+/*.button:disabled, .button:default:disabled {
+    -fx-padding: 5 22 5 22;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: #f5b598;
+    -fx-font-family: "Courgette", Helvetica, Arial, sans-serif;
+    -fx-font-size: 34pt;
+    -fx-text-fill: #3F3A3A;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+.button:default {
+    -fx-background-color: #F39063;
+}
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}*/
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+}
+
