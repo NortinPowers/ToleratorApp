@@ -23,12 +23,10 @@ public class Main extends Application {
 
     public void showScene() {
         try {
-            // Загружаем корневой макет из fxml файла.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("fxml/sample.fxml"));
             rootLayout = (AnchorPane) loader.load();
 
-            // Отображаем сцену, содержащую корневой макет.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);

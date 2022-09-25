@@ -11,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-
 public class Iso2Controller {
 
     @FXML
@@ -31,15 +30,9 @@ public class Iso2Controller {
         switchIso2.setOnAction(event -> {
             openScene("/sample/fxml/iso1.fxml");
         });
-       /* Iso2CloseButton.setOnAction(event -> {
-            Iso2CloseButton.getScene().getWindow().hide();
-            //openScene("/sample/fxml/sample.fxml");
-        });*/
-
-
     }
 
-    private void openScene (String scene) {
+    private void openScene(String scene) {
         switchIso2.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(scene));
@@ -53,7 +46,6 @@ public class Iso2Controller {
         stage.getIcons().add(new Image("file:resources/images/icon.png"));
         stage.setScene(new Scene(root));
         stage.setResizable(false);
-        //stage.showAndWait();
         stage.show();
 
     }

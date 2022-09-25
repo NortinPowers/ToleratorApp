@@ -25,23 +25,14 @@ public class Iso1Controller {
     @FXML
     private Button switchIso1;
 
-
     @FXML
     void initialize() {
         switchIso1.setOnAction(event -> {
             openScene("/sample/fxml/iso2.fxml");
         });
-      /*  Iso1CloseButton.setOnAction(event -> {
-            Iso1CloseButton.getScene().getWindow().hide();
-            //openScene("/sample/fxml/sample.fxml");
-        });*/
-
-
-
-
     }
 
-    private void openScene (String scene) {
+    private void openScene(String scene) {
         switchIso1.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(scene));
@@ -55,7 +46,6 @@ public class Iso1Controller {
         stage.getIcons().add(new Image("file:resources/images/icon.png"));
         stage.setScene(new Scene(root));
         stage.setResizable(false);
-        //stage.showAndWait();
         stage.show();
     }
 }

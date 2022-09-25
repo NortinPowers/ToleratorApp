@@ -4,11 +4,10 @@ import javafx.animation.TranslateTransition;
 import javafx.scene.Node;
 import javafx.util.Duration;
 
-
 public class Shake {
     private TranslateTransition tt;
 
-    public Shake (Node node) {
+    public Shake(Node node) {
         tt = new TranslateTransition(Duration.millis(70), node);
         tt.setFromX(0f);
         tt.setByX(10f);
@@ -21,7 +20,7 @@ public class Shake {
 
     }
 
-    public void playAnim (){
+    public void playAnim() {
         tt.playFromStart();
     }
 }

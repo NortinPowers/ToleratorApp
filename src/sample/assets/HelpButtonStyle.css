@@ -1,7 +1,3 @@
-
-/*
- * Push Button на стиле
- */
 .button {
     -fx-background-color: fafafa;
     -fx-font-family: "Cooper Black";
@@ -16,7 +12,3 @@
     -fx-background-color: #F39063;
 }
 
-/*.button:pressed, .button:default:hover:pressed {
-    -fx-background-color: #f5b598;
-    -fx-text-fill: #3F3A3A;
-}*/

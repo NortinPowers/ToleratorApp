@@ -1,7 +1,5 @@
 package sample.controller;
 
-
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,8 +14,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.Constant;
 import sample.animations.Shake;
-
-
 
 public class MainController {
 
@@ -127,7 +123,6 @@ public class MainController {
     }
 
     private void openScene(String scene) {
-        //ISOButtonGLRT.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(scene));
         try {
@@ -142,7 +137,6 @@ public class MainController {
         stage.setResizable(false);
         stage.showAndWait();
     }
-
 
 }
 
