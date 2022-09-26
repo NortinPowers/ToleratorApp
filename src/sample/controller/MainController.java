@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import sample.Constant;
 import sample.animations.Shake;
@@ -55,21 +56,67 @@ public class MainController {
 
     @FXML
     void initialize() {
+
+        enterField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.RIGHT) {
+                if (fTolButton.isDefaultButton()) {
+                    fTolButton.setDefaultButton(false);
+                    mTolButton.setDefaultButton(true);
+                } else if (mTolButton.isDefaultButton()) {
+                    mTolButton.setDefaultButton(false);
+                    cTolButton.setDefaultButton(true);
+                } else if (cTolButton.isDefaultButton()) {
+                    cTolButton.setDefaultButton(false);
+                    vTolButton.setDefaultButton(true);
+                } else if (vTolButton.isDefaultButton()) {
+                    vTolButton.setDefaultButton(false);
+                    fTolButton.setDefaultButton(true);
+                }
+            }
+            if (event.getCode() == KeyCode.LEFT) {
+                if (fTolButton.isDefaultButton()) {
+                    fTolButton.setDefaultButton(false);
+                    vTolButton.setDefaultButton(true);
+                } else if (mTolButton.isDefaultButton()) {
+                    mTolButton.setDefaultButton(false);
+                    fTolButton.setDefaultButton(true);
+                } else if (cTolButton.isDefaultButton()) {
+                    cTolButton.setDefaultButton(false);
+                    mTolButton.setDefaultButton(true);
+                } else if (vTolButton.isDefaultButton()) {
+                    vTolButton.setDefaultButton(false);
+                    cTolButton.setDefaultButton(true);
+                }
+            }
+        });
+
         fTolButton.setOnAction(event -> {
-            double[] fA = Constant.fAccurance;
-            UseSize(fA, Constant.fRange[0], Constant.fRange[1]);
+            f();
+            fTolButton.setDefaultButton(true);
+            mTolButton.setDefaultButton(false);
+            cTolButton.setDefaultButton(false);
+            vTolButton.setDefaultButton(false);
         });
         mTolButton.setOnAction(event -> {
-            double[] mA = Constant.mAccurance;
-            UseSize(mA, Constant.mRange[0], Constant.mRange[1]);
+            m();
+            mTolButton.setDefaultButton(true);
+            fTolButton.setDefaultButton(false);
+            cTolButton.setDefaultButton(false);
+            vTolButton.setDefaultButton(false);
         });
         cTolButton.setOnAction(event -> {
-            double[] cA = Constant.cAccurance;
-            UseSize(cA, Constant.cRange[0], Constant.cRange[1]);
+            c();
+            cTolButton.setDefaultButton(true);
+            mTolButton.setDefaultButton(false);
+            fTolButton.setDefaultButton(false);
+            vTolButton.setDefaultButton(false);
         });
         vTolButton.setOnAction(event -> {
-            double[] vA = Constant.vAccurance;
-            UseSize(vA, Constant.vRange[0], Constant.vRange[1]);
+            v();
+            vTolButton.setDefaultButton(true);
+            mTolButton.setDefaultButton(false);
+            cTolButton.setDefaultButton(false);
+            fTolButton.setDefaultButton(false);
         });
 
         ISOButtonGLRT.setOnAction(event -> {
@@ -80,6 +127,26 @@ public class MainController {
             openScene("/sample/fxml/iso1.fxml");
         });
 
+    }
+
+    public void f() {
+        double[] fA = Constant.fAccurance;
+        UseSize(fA, Constant.fRange[0], Constant.fRange[1]);
+    }
+
+    public void m() {
+        double[] mA = Constant.mAccurance;
+        UseSize(mA, Constant.mRange[0], Constant.mRange[1]);
+    }
+
+    public void c() {
+        double[] cA = Constant.cAccurance;
+        UseSize(cA, Constant.cRange[0], Constant.cRange[1]);
+    }
+
+    public void v() {
+        double[] vA = Constant.vAccurance;
+        UseSize(vA, Constant.vRange[0], Constant.vRange[1]);
     }
 
     private void UseSize(double[] A, double sR, double eR) {
@@ -137,6 +204,5 @@ public class MainController {
         stage.setResizable(false);
         stage.showAndWait();
     }
-
 }
 

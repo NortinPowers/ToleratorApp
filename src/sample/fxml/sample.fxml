@@ -18,7 +18,7 @@
          <children>
             <TextField fx:id="enterField" alignment="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="78.0" prefWidth="235.0" promptText="enter the size" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 10;">
                <font>
-                  <Font name="Cambria" size="33.0" />
+                  <Font name="Cambria" size="34.0" />
                </font>
             </TextField>
             <Button fx:id="fTolButton" defaultButton="true" layoutX="293.0" layoutY="14.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="84.0" stylesheets="@../assets/NovaStyle.css" text="f">
@@ -48,7 +48,7 @@
             </Label>
             <TextField fx:id="outField" alignment="CENTER" editable="false" layoutX="14.0" layoutY="152.0" prefHeight="78.0" prefWidth="235.0" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 10;">
                <font>
-                  <Font name="Cambria" size="33.0" />
+                  <Font name="Cambria" size="34.0" />
                </font></TextField>
             <Label layoutX="337.0" layoutY="109.0" prefHeight="43.0" prefWidth="69.0" text="min" textAlignment="CENTER" textFill="#949090">
                <font>
@@ -62,11 +62,11 @@
             </Label>
             <TextField fx:id="minOutField" alignment="CENTER" editable="false" layoutX="279.0" layoutY="152.0" prefHeight="78.0" prefWidth="185.0" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 10;">
                <font>
-                  <Font name="Cambria" size="33.0" />
+                  <Font name="Cambria" size="34.0" />
                </font></TextField>
             <TextField fx:id="maxOutField" alignment="CENTER" editable="false" layoutX="474.0" layoutY="152.0" prefHeight="78.0" prefWidth="185.0" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 10;">
                <font>
-                  <Font name="Cambria" size="33.0" />
+                  <Font name="Cambria" size="34.0" />
                </font></TextField>
          </children>
       </AnchorPane>

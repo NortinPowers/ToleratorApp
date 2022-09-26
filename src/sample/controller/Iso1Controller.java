@@ -32,7 +32,7 @@ public class Iso1Controller {
         });
     }
 
-    private void openScene(String scene) {
+    private void openScene (String scene) {
         switchIso1.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(scene));

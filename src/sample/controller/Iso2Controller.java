@@ -32,7 +32,7 @@ public class Iso2Controller {
         });
     }
 
-    private void openScene(String scene) {
+    private void openScene (String scene) {
         switchIso2.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(scene));
@@ -47,7 +47,6 @@ public class Iso2Controller {
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.show();
-
     }
 }
 
