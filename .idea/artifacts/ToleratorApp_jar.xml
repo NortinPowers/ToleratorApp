@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="ToleratorApp:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/ToleratorApp_jar</output-path>
-    <root id="archive" name="ToleratorApp.jar">
-      <element id="module-output" name="ToleratorApp" />
-      <element id="library" level="project" name="mysql-connector-java-8.0.27" />
-    </root>
-  </artifact>
-</component>
